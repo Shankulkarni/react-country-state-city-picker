@@ -1,0 +1,23 @@
+{
+  "name": "react-country-state-city-picker-example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-country-state-city-picker": "link:../"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^4.5.2",
+    "typescript": "^6.0.2",
+    "vite": "^6.3.5"
+  }
+}
