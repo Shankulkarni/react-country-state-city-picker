@@ -1,6 +1,6 @@
-# 🌍 react-country-state-city-picker
+# react-country-state-city-picker
 
-A fully featured, accessible, and customizable **country → state → city** cascade picker for React.
+Drop-in country → state → city picker for React. Always up-to-date geodata, zero dependencies, auto dark/light mode, fully accessible out of the box.
 
 [![npm version](https://img.shields.io/npm/v/react-country-state-city-picker?style=flat-square&color=6366f1)](https://www.npmjs.com/package/react-country-state-city-picker)
 [![npm downloads](https://img.shields.io/npm/dm/react-country-state-city-picker?style=flat-square&color=6366f1)](https://www.npmjs.com/package/react-country-state-city-picker)
@@ -10,31 +10,9 @@ A fully featured, accessible, and customizable **country → state → city** ca
 
 ---
 
-## ✨ Features
+<video src="assets/demo.mp4" autoplay loop muted playsinline width="100%"></video>
 
-| Feature                      | Details                                                                      |
-| ---------------------------- | ---------------------------------------------------------------------------- |
-| 🌐 **Live geodata**          | Countries, states, and cities via [geocoded.me](https://api.geocoded.me) API |
-| 🌑 **Dark & light mode**     | Auto-detects system color scheme; override with a single prop                |
-| ♿ **Accessibility-first**   | ARIA roles, live regions, dynamic labels, keyboard navigation, focus traps   |
-| 🌍 **Internationalization**  | 28 customizable label strings — ship in any language                         |
-| 🎨 **Fully themeable**       | 22 design tokens covering every pixel of the UI                              |
-| 🔌 **Render props**          | Replace trigger, row, search, or empty state with your own UI                |
-| 🪝 **Headless hooks**        | `useCountries`, `useStates`, `useCities` — build your own UI from scratch    |
-| 🔗 **Cascade or standalone** | Use all three pickers together or any single one in isolation                |
-| ⚡ **Smart caching**         | LRU cache with in-flight deduplication — no duplicate network requests       |
-| 🔁 **Retry logic**           | 3 attempts with exponential backoff on network failures                      |
-| 🧪 **Testable**              | `testID` on every interactive element                                        |
-| 💙 **TypeScript-first**      | Strict types for all components, hooks, themes, and labels                   |
-| 📦 **Zero dependencies**     | No third-party UI library required                                           |
-
----
-
-## 📸 Preview
-
-| Light          | Dark           | Custom Theme   |
-| -------------- | -------------- | -------------- |
-| _(screenshot)_ | _(screenshot)_ | _(screenshot)_ |
+![Screenshot](assets/screenshot.png)
 
 ---
 
@@ -108,6 +86,26 @@ export default function AddressForm() {
   )
 }
 ```
+
+---
+
+## ✨ Features
+
+| Feature                      | Details                                                                      |
+| ---------------------------- | ---------------------------------------------------------------------------- |
+| 🌐 **Live geodata**          | Countries, states, and cities via [geocoded.me](https://api.geocoded.me) API |
+| 🌑 **Dark & light mode**     | Auto-detects system color scheme; override with a single prop                |
+| ♿ **Accessibility-first**   | ARIA roles, live regions, dynamic labels, keyboard navigation, focus traps   |
+| 🌍 **Internationalization**  | 28 customizable label strings — ship in any language                         |
+| 🎨 **Fully themeable**       | 22 design tokens covering every pixel of the UI                              |
+| 🔌 **Render props**          | Replace trigger, row, search, or empty state with your own UI                |
+| 🪝 **Headless hooks**        | `useCountries`, `useStates`, `useCities` — build your own UI from scratch    |
+| 🔗 **Cascade or standalone** | Use all three pickers together or any single one in isolation                |
+| ⚡ **Smart caching**         | LRU cache with in-flight deduplication — no duplicate network requests       |
+| 🔁 **Retry logic**           | 3 attempts with exponential backoff on network failures                      |
+| 🧪 **Testable**              | `testID` on every interactive element                                        |
+| 💙 **TypeScript-first**      | Strict types for all components, hooks, themes, and labels                   |
+| 📦 **Zero dependencies**     | No third-party UI library required                                           |
 
 ---
 
