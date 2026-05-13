@@ -10,9 +10,9 @@ Drop-in country → state → city picker for React. Always up-to-date geodata, 
 
 ---
 
-<video src="assets/demo.mp4" autoplay loop muted playsinline width="100%"></video>
+<video src="https://raw.githubusercontent.com/shankulkarni/react-country-state-city-picker/main/assets/demo.mp4" autoplay loop muted playsinline width="100%"></video>
 
-![Screenshot](assets/screenshot.png)
+<img src="https://raw.githubusercontent.com/shankulkarni/react-country-state-city-picker/main/assets/screenshot.png" alt="Screenshot" width="625" />
 
 ---
 
@@ -42,13 +42,13 @@ import { CountryStateCityPicker } from 'react-country-state-city-picker'
 import type { PickerSelection } from 'react-country-state-city-picker'
 
 export default function AddressForm() {
-  const handleSelect = (selection: PickerSelection) => {
-    console.log(selection.country?.name) // "India"
-    console.log(selection.state?.name)   // "Maharashtra"
-    console.log(selection.city?.name)    // "Mumbai"
-  }
+	const handleSelect = (selection: PickerSelection) => {
+		console.log(selection.country?.name) // "India"
+		console.log(selection.state?.name) // "Maharashtra"
+		console.log(selection.city?.name) // "Mumbai"
+	}
 
-  return <CountryStateCityPicker onSelect={handleSelect} />
+	return <CountryStateCityPicker onSelect={handleSelect} />
 }
 ```
 
@@ -57,33 +57,33 @@ export default function AddressForm() {
 ```tsx
 import { useState } from 'react'
 import {
-  CountryPicker,
-  StatePicker,
-  CityPicker,
+	CountryPicker,
+	StatePicker,
+	CityPicker,
 } from 'react-country-state-city-picker'
 import type { Country, State, City } from 'react-country-state-city-picker'
 
 export default function AddressForm() {
-  const [country, setCountry] = useState<Country | null>(null)
-  const [state, setState] = useState<State | null>(null)
-  const [city, setCity] = useState<City | null>(null)
+	const [country, setCountry] = useState<Country | null>(null)
+	const [state, setState] = useState<State | null>(null)
+	const [city, setCity] = useState<City | null>(null)
 
-  return (
-    <>
-      <CountryPicker value={country} onChange={setCountry} />
-      <StatePicker
-        value={state}
-        onChange={setState}
-        countryCode={country?.isoCode}
-      />
-      <CityPicker
-        value={city}
-        onChange={setCity}
-        countryCode={country?.isoCode}
-        stateCode={state?.isoCode}
-      />
-    </>
-  )
+	return (
+		<>
+			<CountryPicker value={country} onChange={setCountry} />
+			<StatePicker
+				value={state}
+				onChange={setState}
+				countryCode={country?.isoCode}
+			/>
+			<CityPicker
+				value={city}
+				onChange={setCity}
+				countryCode={country?.isoCode}
+				stateCode={state?.isoCode}
+			/>
+		</>
+	)
 }
 ```
 
@@ -115,19 +115,19 @@ export default function AddressForm() {
 
 All-in-one component that manages the full country → state → city cascade.
 
-| Prop            | Type                                       | Default          | Description                                              |
-| --------------- | ------------------------------------------ | ---------------- | -------------------------------------------------------- |
-| `onSelect`      | `(selection: PickerSelection) => void`     | —                | Called whenever any level changes                        |
-| `defaultValue`  | `Partial<PickerSelection>`                 | —                | Pre-selected values on mount                             |
-| `theme`         | `Partial<PickerTheme>`                     | auto             | Override any design token (falls back to system theme)   |
-| `labels`        | `Partial<PickerLabels>`                    | `DEFAULT_LABELS` | Override any label string                                |
-| `testID`        | `string`                                   | —                | Base test ID — suffixed per field (e.g. `base-country`)  |
-| `style`         | `CSSProperties`                            | —                | Outer container style                                    |
-| `className`     | `string`                                   | —                | Outer container class name                               |
-| `renderTrigger` | `(props: TriggerRenderProps) => ReactNode` | —                | Replace the trigger button UI                            |
-| `renderItem`    | `(props: ItemRenderProps) => ReactNode`    | —                | Replace each dropdown row                                |
-| `renderSearch`  | `(props: SearchRenderProps) => ReactNode`  | —                | Replace the search input                                 |
-| `renderEmpty`   | `(props: EmptyRenderProps) => ReactNode`   | —                | Replace the empty state                                  |
+| Prop            | Type                                       | Default          | Description                                             |
+| --------------- | ------------------------------------------ | ---------------- | ------------------------------------------------------- |
+| `onSelect`      | `(selection: PickerSelection) => void`     | —                | Called whenever any level changes                       |
+| `defaultValue`  | `Partial<PickerSelection>`                 | —                | Pre-selected values on mount                            |
+| `theme`         | `Partial<PickerTheme>`                     | auto             | Override any design token (falls back to system theme)  |
+| `labels`        | `Partial<PickerLabels>`                    | `DEFAULT_LABELS` | Override any label string                               |
+| `testID`        | `string`                                   | —                | Base test ID — suffixed per field (e.g. `base-country`) |
+| `style`         | `CSSProperties`                            | —                | Outer container style                                   |
+| `className`     | `string`                                   | —                | Outer container class name                              |
+| `renderTrigger` | `(props: TriggerRenderProps) => ReactNode` | —                | Replace the trigger button UI                           |
+| `renderItem`    | `(props: ItemRenderProps) => ReactNode`    | —                | Replace each dropdown row                               |
+| `renderSearch`  | `(props: SearchRenderProps) => ReactNode`  | —                | Replace the search input                                |
+| `renderEmpty`   | `(props: EmptyRenderProps) => ReactNode`   | —                | Replace the empty state                                 |
 
 ---
 
@@ -213,30 +213,30 @@ const brandTheme = {
 <details>
 <summary>All 22 theme tokens</summary>
 
-| Token                    | Description                         |
-| ------------------------ | ----------------------------------- |
-| `dropdownBackground`     | Dropdown panel background           |
-| `titleColor`             | Dropdown title text                 |
-| `searchBackground`       | Search input background             |
-| `searchTextColor`        | Search input text                   |
-| `searchPlaceholderColor` | Search placeholder text             |
-| `rowTextColor`           | Primary text in list rows           |
-| `rowSubTextColor`        | Secondary text in list rows         |
-| `rowHoverBackground`     | Row hover state                     |
-| `separatorColor`         | Row separator line                  |
-| `emptyTextColor`         | Empty state text                    |
-| `labelColor`             | Field label above trigger           |
-| `borderColor`            | Trigger border                      |
-| `triggerBackground`      | Trigger background                  |
-| `disabledBackground`     | Disabled trigger background         |
-| `disabledBorderColor`    | Disabled trigger border             |
-| `hoverBackground`        | Trigger hover state                 |
-| `focusRingColor`         | Keyboard focus ring                 |
-| `valueTextColor`         | Selected value text                 |
-| `placeholderColor`       | Trigger placeholder text            |
-| `chevronColor`           | Chevron icon                        |
-| `chevronDisabledColor`   | Chevron when disabled               |
-| `loadingColor`           | Loading spinner                     |
+| Token                    | Description                 |
+| ------------------------ | --------------------------- |
+| `dropdownBackground`     | Dropdown panel background   |
+| `titleColor`             | Dropdown title text         |
+| `searchBackground`       | Search input background     |
+| `searchTextColor`        | Search input text           |
+| `searchPlaceholderColor` | Search placeholder text     |
+| `rowTextColor`           | Primary text in list rows   |
+| `rowSubTextColor`        | Secondary text in list rows |
+| `rowHoverBackground`     | Row hover state             |
+| `separatorColor`         | Row separator line          |
+| `emptyTextColor`         | Empty state text            |
+| `labelColor`             | Field label above trigger   |
+| `borderColor`            | Trigger border              |
+| `triggerBackground`      | Trigger background          |
+| `disabledBackground`     | Disabled trigger background |
+| `disabledBorderColor`    | Disabled trigger border     |
+| `hoverBackground`        | Trigger hover state         |
+| `focusRingColor`         | Keyboard focus ring         |
+| `valueTextColor`         | Selected value text         |
+| `placeholderColor`       | Trigger placeholder text    |
+| `chevronColor`           | Chevron icon                |
+| `chevronDisabledColor`   | Chevron when disabled       |
+| `loadingColor`           | Loading spinner             |
 
 </details>
 
@@ -271,49 +271,49 @@ const spanishLabels = {
 
 ```ts
 type PickerLabels = {
-  // Field labels
-  countryLabel: string
-  stateLabel: string
-  cityLabel: string
+	// Field labels
+	countryLabel: string
+	stateLabel: string
+	cityLabel: string
 
-  // Dropdown titles
-  countryTitle: string
-  stateTitle: string
-  cityTitle: string
+	// Dropdown titles
+	countryTitle: string
+	stateTitle: string
+	cityTitle: string
 
-  // Placeholder text
-  countryPlaceholder: string
-  statePlaceholder: string
-  cityPlaceholder: string
+	// Placeholder text
+	countryPlaceholder: string
+	statePlaceholder: string
+	cityPlaceholder: string
 
-  // Disabled-state placeholders
-  stateDisabledPlaceholder: string
-  cityDisabledPlaceholder: string
+	// Disabled-state placeholders
+	stateDisabledPlaceholder: string
+	cityDisabledPlaceholder: string
 
-  // N/A state
-  stateNotApplicable: string
-  cityNotApplicable: string
+	// N/A state
+	stateNotApplicable: string
+	cityNotApplicable: string
 
-  // Disabled hints (shown as tooltip)
-  stateDisabledHint: string
-  cityDisabledHint: string
+	// Disabled hints (shown as tooltip)
+	stateDisabledHint: string
+	cityDisabledHint: string
 
-  // Search
-  searchPlaceholder: string
-  noResults: string
+	// Search
+	searchPlaceholder: string
+	noResults: string
 
-  // Loading & error (called with runtime values)
-  loadingLabel: (field: string) => string
-  errorLabel: (field: string) => string
-  fallbackPlaceholder: (field: string) => string
+	// Loading & error (called with runtime values)
+	loadingLabel: (field: string) => string
+	errorLabel: (field: string) => string
+	fallbackPlaceholder: (field: string) => string
 
-  // Accessibility
-  closeDropdown: (title: string) => string
-  searchAccessibilityLabel: (title: string) => string
-  openPickerHint: (label: string) => string
-  selectedValueLabel: (label: string, value: string) => string
-  fallbackInputLabel: (label: string) => string
-  fallbackInputHint: (label: string) => string
+	// Accessibility
+	closeDropdown: (title: string) => string
+	searchAccessibilityLabel: (title: string) => string
+	openPickerHint: (label: string) => string
+	selectedValueLabel: (label: string, value: string) => string
+	fallbackInputLabel: (label: string) => string
+	fallbackInputHint: (label: string) => string
 }
 ```
 
@@ -329,15 +329,22 @@ Take complete control of any part of the UI while keeping the library's data-fet
 
 ```tsx
 <CountryPicker
-  value={country}
-  onChange={setCountry}
-  renderTrigger={({ label, displayValue, placeholder, isLoading, isDisabled, onPress }) => (
-    <button onClick={onPress} disabled={isDisabled} className="my-trigger">
-      <span>{label}</span>
-      <span>{displayValue ?? placeholder}</span>
-      {isLoading && <span className="spinner" />}
-    </button>
-  )}
+	value={country}
+	onChange={setCountry}
+	renderTrigger={({
+		label,
+		displayValue,
+		placeholder,
+		isLoading,
+		isDisabled,
+		onPress,
+	}) => (
+		<button onClick={onPress} disabled={isDisabled} className="my-trigger">
+			<span>{label}</span>
+			<span>{displayValue ?? placeholder}</span>
+			{isLoading && <span className="spinner" />}
+		</button>
+	)}
 />
 ```
 
@@ -345,14 +352,14 @@ Take complete control of any part of the UI while keeping the library's data-fet
 
 ```tsx
 <CountryPicker
-  value={country}
-  onChange={setCountry}
-  renderItem={({ label, value, onSelect }) => (
-    <button onClick={onSelect} className="my-row">
-      {label}
-      <span className="iso-code">{value}</span>
-    </button>
-  )}
+	value={country}
+	onChange={setCountry}
+	renderItem={({ label, value, onSelect }) => (
+		<button onClick={onSelect} className="my-row">
+			{label}
+			<span className="iso-code">{value}</span>
+		</button>
+	)}
 />
 ```
 
@@ -360,14 +367,18 @@ Take complete control of any part of the UI while keeping the library's data-fet
 
 ```tsx
 <CountryPicker
-  value={country}
-  onChange={setCountry}
-  renderSearch={({ value, placeholder, onChange }) => (
-    <div className="my-search">
-      <span>🔍</span>
-      <input value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} />
-    </div>
-  )}
+	value={country}
+	onChange={setCountry}
+	renderSearch={({ value, placeholder, onChange }) => (
+		<div className="my-search">
+			<span>🔍</span>
+			<input
+				value={value}
+				onChange={(e) => onChange(e.target.value)}
+				placeholder={placeholder}
+			/>
+		</div>
+	)}
 />
 ```
 
@@ -375,11 +386,9 @@ Take complete control of any part of the UI while keeping the library's data-fet
 
 ```tsx
 <CountryPicker
-  value={country}
-  onChange={setCountry}
-  renderEmpty={({ query }) => (
-    <p>No results for "{query}"</p>
-  )}
+	value={country}
+	onChange={setCountry}
+	renderEmpty={({ query }) => <p>No results for "{query}"</p>}
 />
 ```
 
@@ -519,44 +528,44 @@ All types are exported from the package root:
 
 ```ts
 import type {
-  Country,
-  State,
-  City,
-  PickerSelection,
-  PickerTheme,
-  PickerLabels,
-  TriggerRenderProps,
-  ItemRenderProps,
-  SearchRenderProps,
-  EmptyRenderProps,
-  PickerRenderProps,
+	Country,
+	State,
+	City,
+	PickerSelection,
+	PickerTheme,
+	PickerLabels,
+	TriggerRenderProps,
+	ItemRenderProps,
+	SearchRenderProps,
+	EmptyRenderProps,
+	PickerRenderProps,
 } from 'react-country-state-city-picker'
 ```
 
 ```ts
 type Country = {
-  name: string
-  isoCode: string
-  flag: string      // emoji flag
-  currency?: string
+	name: string
+	isoCode: string
+	flag: string // emoji flag
+	currency?: string
 }
 
 type State = {
-  name: string
-  isoCode: string
-  countryCode: string
+	name: string
+	isoCode: string
+	countryCode: string
 }
 
 type City = {
-  name: string
-  stateCode: string
-  countryCode: string
+	name: string
+	stateCode: string
+	countryCode: string
 }
 
 type PickerSelection = {
-  country: Country | null
-  state: State | null
-  city: City | null
+	country: Country | null
+	state: State | null
+	city: City | null
 }
 ```
 
