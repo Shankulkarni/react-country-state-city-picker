@@ -10,9 +10,9 @@ Drop-in country → state → city picker for React. Always up-to-date geodata, 
 
 ---
 
-<video src="https://raw.githubusercontent.com/shankulkarni/react-country-state-city-picker/main/assets/demo.mp4" autoplay loop muted playsinline width="100%"></video>
+<video src="https://github.com/user-attachments/assets/b4f4e4b7-0d96-4678-a179-d7651edf25cb" autoplay loop muted playsinline width="100%"></video>
 
-<img src="https://raw.githubusercontent.com/shankulkarni/react-country-state-city-picker/main/assets/screenshot.png" alt="Screenshot" width="625" />
+<img src="https://raw.githubusercontent.com/shankulkarni/react-country-state-city-picker/main/assets/screenshot.png" alt="Screenshot" width="551" />
 
 ---
 
