@@ -1,79 +1,112 @@
 {
-  "name": "react-country-state-city-picker",
-  "version": "0.1.0",
-  "description": "Country, state, and city picker for React",
-  "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    },
-    "./package.json": "./package.json"
-  },
-  "files": ["dist", "src", "!**/__tests__", "!**/__fixtures__", "!**/__mocks__", "!**/.*"],
-  "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint \"src/**/*.{ts,tsx}\"",
-    "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
-    "format:check": "prettier --check \"**/*.{ts,tsx,json,md}\"",
-    "check": "bun run typecheck && bun run lint && bun run format:check",
-    "example": "cd example && bun run dev",
-    "changeset": "changeset",
-    "version": "changeset version",
-    "release": "bun run build && changeset publish",
-    "prepare": "husky"
-  },
-  "keywords": ["react", "country", "state", "city", "picker", "select", "geocoded"],
-  "author": "Shan Kulkarni <shan.kulkarni.ts@gmail.com> (https://github.com/shankulkarni)",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shankulkarni/react-country-state-city-picker.git"
-  },
-  "bugs": {
-    "url": "https://github.com/shankulkarni/react-country-state-city-picker/issues"
-  },
-  "homepage": "https://github.com/shankulkarni/react-country-state-city-picker#readme",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
-  "peerDependencies": {
-    "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
-  },
-  "devDependencies": {
-    "@changesets/cli": "^2.31.0",
-    "@eslint/js": "^10.0.1",
-    "@types/react": "^19.2.0",
-    "@types/react-dom": "^19.2.0",
-    "eslint": "^9.39.4",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.1.1",
-    "husky": "^9",
-    "lint-staged": "^16.4.0",
-    "prettier": "^3.8.1",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "tsup": "^8.5.0",
-    "typescript": "^6.0.2",
-    "typescript-eslint": "^8.0.0"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "semi": false,
-    "trailingComma": "es5",
-    "useTabs": true
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": ["eslint --fix", "prettier --write"],
-    "*.{json,md}": ["prettier --write"]
-  }
+	"name": "react-country-state-city-picker",
+	"version": "0.2.0",
+	"description": "Country, state, and city picker for React",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		},
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"dist",
+		"src",
+		"!**/__tests__",
+		"!**/__fixtures__",
+		"!**/__mocks__",
+		"!**/.*"
+	],
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"typecheck": "tsc --noEmit",
+		"lint": "eslint \"src/**/*.{ts,tsx}\"",
+		"format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
+		"format:check": "prettier --check \"**/*.{ts,tsx,json,md}\"",
+		"check": "bun run typecheck && bun run lint && bun run format:check",
+		"example": "cd example && bun run dev",
+		"changeset": "changeset",
+		"version": "changeset version",
+		"release": "bun run build && changeset publish",
+		"prepare": "husky"
+	},
+	"keywords": [
+		"react",
+		"country",
+		"state",
+		"city",
+		"picker",
+		"select",
+		"dropdown",
+		"cascade",
+		"address",
+		"location",
+		"country-picker",
+		"state-picker",
+		"city-picker",
+		"country-select",
+		"address-form",
+		"geocoded",
+		"typescript",
+		"accessible",
+		"dark-mode",
+		"headless"
+	],
+	"author": "Shan Kulkarni <shan.kulkarni.ts@gmail.com> (https://github.com/shankulkarni)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/shankulkarni/react-country-state-city-picker.git"
+	},
+	"bugs": {
+		"url": "https://github.com/shankulkarni/react-country-state-city-picker/issues"
+	},
+	"homepage": "https://github.com/shankulkarni/react-country-state-city-picker#readme",
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/"
+	},
+	"peerDependencies": {
+		"react": ">=18.0.0",
+		"react-dom": ">=18.0.0"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.31.0",
+		"@eslint/js": "^10.0.1",
+		"@types/react": "^19.2.0",
+		"@types/react-dom": "^19.2.0",
+		"eslint": "^9.39.4",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-prettier": "^5.5.5",
+		"eslint-plugin-react": "^7.37.5",
+		"eslint-plugin-react-hooks": "^7.1.1",
+		"husky": "^9",
+		"lint-staged": "^16.4.0",
+		"prettier": "^3.8.1",
+		"react": "19.2.0",
+		"react-dom": "19.2.0",
+		"tsup": "^8.5.0",
+		"typescript": "^6.0.2",
+		"typescript-eslint": "^8.0.0"
+	},
+	"prettier": {
+		"singleQuote": true,
+		"semi": false,
+		"trailingComma": "es5",
+		"useTabs": true
+	},
+	"lint-staged": {
+		"*.{ts,tsx}": [
+			"eslint --fix",
+			"prettier --write"
+		],
+		"*.{json,md}": [
+			"prettier --write"
+		]
+	}
 }
