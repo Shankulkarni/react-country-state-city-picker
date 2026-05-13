@@ -1,5 +1,11 @@
 # react-country-state-city-picker
 
+## 0.2.1
+
+### Patch Changes
+
+- Update README with video demo and expanded npm keywords for discoverability.
+
 ## 0.2.0
 
 ### Minor Changes

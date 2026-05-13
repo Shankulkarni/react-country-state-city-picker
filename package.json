@@ -1,6 +1,6 @@
 {
 	"name": "react-country-state-city-picker",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Country, state, and city picker for React",
 	"type": "module",
 	"main": "./dist/index.cjs",
